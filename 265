@@ -1,0 +1,17 @@
+# Введення кількості автомобілів
+n = int(input("Введіть кількість автомобілів: "))
+# Ініціалізація списку швидкостей
+speeds = []
+# Зчитування швидкостей автомобілів
+for i in range(n):
+    speed = int(input(f"Введіть швидкість {i+1}-го автомобіля: "))
+    speeds.append(speed)
+# Обчислення середньої швидкості
+average_speed = sum(speeds) / n
+# Перевірка, чи перевищив хтось 60 км/год
+if any(speed > 60 for speed in speeds):
+    print(f"{average_speed:.1f}")
+    print("Yes")
+else:
+    print(f"{average_speed:.1f}")
+    print("No")
